@@ -17,9 +17,7 @@ namespace BarkotTakip.Data.Context
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Products()
         {
-            this.OrderDetails = new HashSet<OrderDetails>();
-            this.ProductStock = new HashSet<ProductStock>();
-            this.PurchaseOrder = new HashSet<PurchaseOrder>();
+            this.PurchaseOrderDetail = new HashSet<PurchaseOrderDetail>();
         }
     
         public int ProductId { get; set; }
@@ -28,17 +26,22 @@ namespace BarkotTakip.Data.Context
         public Nullable<int> CategoryId { get; set; }
         public Nullable<int> QuantityPerUnit { get; set; }
         public Nullable<decimal> UnitPrice { get; set; }
-        public Nullable<int> UnitsInStock { get; set; }
+        public Nullable<int> StockCount { get; set; }
         public Nullable<bool> Discount { get; set; }
         public Nullable<System.DateTime> ExpirationDate { get; set; }
+        public string Description { get; set; }
+        public Nullable<decimal> InPrice { get; set; }
+        public Nullable<decimal> SalesPrice { get; set; }
+        public Nullable<bool> IsActive { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
+        public Nullable<int> CreatedBy { get; set; }
+        public Nullable<System.DateTime> UpdateDate { get; set; }
+        public Nullable<int> UpdateBy { get; set; }
+        public Nullable<int> Count { get; set; }
     
         public virtual Categories Categories { get; set; }
-       
-        public virtual ICollection<OrderDetails> OrderDetails { get; set; }
         public virtual Suppliers Suppliers { get; set; }
-     
-        public virtual ICollection<ProductStock> ProductStock { get; set; }
-       
-        public virtual ICollection<PurchaseOrder> PurchaseOrder { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
     }
 }

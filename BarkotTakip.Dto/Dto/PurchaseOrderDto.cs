@@ -1,4 +1,5 @@
-﻿using BarkotTakip.Data.Context;
+﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,56 @@ namespace BarkotTakip.Dto.Dto
 {
     public class PurchaseOrderDto
     {
-        public int PurchaseOrderId { get; set; }
-        public int CustomerId { get; set; }
-        public Nullable<decimal> Price { get; set; }
-        public Nullable<bool> IsApporeved { get; set; }
-        public Nullable<int> ProductId { get; set; }
-        public Nullable<int> Quantity { get; set; }
 
-        public virtual Customers Customers { get; set; }
-        public virtual Products Products { get; set; }
+        public int PurchaseOrderId
+        {
+            get; set;
+        }
+        public Nullable<int> CustomerId
+        {
+            get; set;
+        }
+        public Nullable<int> PaymentTypeId
+        {
+            get; set;
+        }
+        public Nullable<int> EmployeeId
+        {
+            get; set;
+        }
+        public Nullable<bool> IsApporeved
+        {
+            get; set;
+        }
+        public Nullable<decimal> PurchasePrice
+        {
+            get; set;
+        }
+        public Nullable<decimal> TotalPrice
+        {
+            get; set;
+        }
+        public Nullable<System.DateTime> CreateDate
+        {
+            get; set;
+        }
+        public Nullable<int> PurchaseOrderStatusId
+        {
+            get; set;
+        }
+        public Nullable<int> UpdatedBy
+        {
+            get; set;
+        }
+        public Nullable<System.DateTime> UpdatedDate
+        {
+            get; set;
+        }
+        public Nullable<int> CreatedBy
+        {
+            get; set;
+        }
+
     }
 }
+    

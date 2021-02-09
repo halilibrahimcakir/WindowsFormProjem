@@ -1,4 +1,9 @@
-﻿using System;
+﻿using BarkotTakipSistemi.ADMIN_OPERATION;
+using BarkotTakipSistemi.CacheManager;
+using BarkotTakipSistemi.CASE_OPERATİON;
+using BarkotTakipSistemi.PRODUCT_OPERATION;
+using BarkotTakipSistemi.SALES_OPERATİON;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +17,7 @@ namespace BarkotTakipSistemi
 {
     public partial class Main : Form
     {
+      
         public Main()
         {
             InitializeComponent();
@@ -19,6 +25,7 @@ namespace BarkotTakipSistemi
             Height = 785;
             costumizeDesing();
 
+           
         }
 
         private void costumizeDesing()
@@ -26,6 +33,7 @@ namespace BarkotTakipSistemi
             pnlCaseSubMenu.Visible = false;
             pnlSalesSubMenu.Visible = false;
             pnlStockSubMenu.Visible = false;
+            pnlAdminSubMenu.Visible = false;
         }
 
         private void hideSubMenu()
@@ -36,6 +44,9 @@ namespace BarkotTakipSistemi
                 pnlCaseSubMenu.Visible = false;
             if (pnlStockSubMenu.Visible == true)
                 pnlStockSubMenu.Visible = false;
+            if (pnlAdminSubMenu.Visible == true)
+                pnlAdminSubMenu.Visible = false;
+            
 
         }
 
@@ -61,20 +72,19 @@ namespace BarkotTakipSistemi
 
             openChildForm(new SELL());
             hideSubMenu();
+            lblPageHeader.Text = "Hızlı Satış";
+            lblPageDescription.Text = "Bu ekrandan çok amaçlı satış yapabilirsiniz...";
 
 
         }
 
         private void btnReport_Click(object sender, EventArgs e)
         {
+            openChildForm(new Iade());
             hideSubMenu();
+            lblPageHeader.Text = "İade";
+            lblPageDescription.Text = "Bu ekrandan iade ile alakalı işlemlerini yapabilirsiniz.";
         }
-
-        private void btnInvoice_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
-
         private void btnCase_Click(object sender, EventArgs e)
         {
             showSubMenu(pnlCaseSubMenu);
@@ -82,32 +92,32 @@ namespace BarkotTakipSistemi
 
         private void btnFinance_Click(object sender, EventArgs e)
         {
+            openChildForm(new Case());
             hideSubMenu();
+            lblPageHeader.Text = "Gelir";
+            lblPageDescription.Text = "Bu ekrandan gelir işlemlerini yapabilirsiniz...";
         }
 
         private void btnVeresiye_Click(object sender, EventArgs e)
         {
+            openChildForm(new Veresiye());
             hideSubMenu();
-        }
-
-        private void btnCari_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
+            lblPageHeader.Text = "Veresiye";
+            lblPageDescription.Text = "Bu ekrandan veresiye işlemlerini yapabilirsiniz...";
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
+
             showSubMenu(pnlStockSubMenu);
+           
         }
-
-        private void btnViewStock_Click(object sender, EventArgs e)
+        private void btnProductManegament_Click(object sender, EventArgs e)
         {
+            openChildForm(new ProductManegament());
             hideSubMenu();
-        }
-
-        private void btnAddStock_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
+            lblPageHeader.Text = "Ürün Yönetimi";
+            lblPageDescription.Text = "Bu ekrandan ürünlerinizi düzenleyebilirsiniz...";
         }
 
         private Form activeForm = null;
@@ -128,7 +138,34 @@ namespace BarkotTakipSistemi
 
         private void Main_Load(object sender, EventArgs e)
         {
+            lblUserName.Text = Cache.NameSurname.ToString();
+        }
 
+        private void btnAdminActions_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlAdminSubMenu);
+
+        }
+
+        private void btnAdminPanel_Click(object sender, EventArgs e)
+        {
+            lblPageHeader.Text = "Yönetici Paneli";
+            lblPageDescription.Text = "Bu ekrandan çalışanlarınızın bilgilerini düzenleyebilirsiniz...";
+            openChildForm(new AdminPanel());
+            hideSubMenu();
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Uygulamayı kapatmak istediğinize emin misiniz ?", "Uyarı", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

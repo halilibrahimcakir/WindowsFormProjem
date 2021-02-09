@@ -1,4 +1,5 @@
-﻿using BarkotTakip.Data.Context;
+﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace BarkotTakip.Dto.Dto
         public int PurchaseOrderId { get; set; }
         public Nullable<bool> IsPayed { get; set; }
 
-        public virtual Customers Customers { get; set; }
+      
+
     }
 }

@@ -1,147 +1,85 @@
 ﻿using BarkotTakip.Data.Context;
 using BarkotTakip.Data.UnitOfWork;
 using BarkotTakip.Dto.Dto;
+using BarkotTakip.Service.Mapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BarkotTakip.Business.Service
+namespace BarkotTakip.Business.Services
 {
     public interface ISuppliesServices
     {
 
-        List<SuppliesDto> GetAll();
-        SuppliesDto GetById(int id);
-        void Add(SuppliesDto dto);
-        void Update(SuppliesDto dto);
+        List<SuppliersDto> GetAll();
+        SuppliersDto GetById(int id);
+        void Add(SuppliersDto dto);
+        void Update(SuppliersDto dto);
 
-        void Delete(SuppliesDto dto);
+        void Delete(int id);
 
 
     }
     public class SuppliesServices : ISuppliesServices
-
     {
 
 
-        public List<SuppliesDto> GetAll()
+        public List<SuppliersDto> GetAll()
         {
-            List<SuppliesDto> result = new List<SuppliesDto>();
-
             using (UnitOfWork uow = new UnitOfWork())
             {
                 var list = uow.SuppliesRepository.GetAll().ToList();
-
-
-                result = list.Select(c => new SuppliesDto
-                {
-                    Adress = c.Adress,
-                    CompanyName = c.CompanyName,
-                    Fax = c.Fax,
-                    Phone = c.Phone,
-                    Products = c.Products,
-                    SupplierId = c.SupplierId,
-                    Website = c.Website,
-
-
-
-                }).ToList();
-
+                return list.Select(MapperFactory.Map<Suppliers, SuppliersDto>).ToList();
             }
-            return result;
-
-
-
         }
-        public SuppliesDto GetById(int id)
+
+
+
+        public SuppliersDto GetById(int id)
         {
-            SuppliesDto result = new SuppliesDto();
             using (UnitOfWork uow = new UnitOfWork())
             {
                 var entity = uow.SuppliesRepository.GetById(id);
 
-                result = new SuppliesDto
-                {
-                    Adress = entity.Adress,
-                    CompanyName = entity.CompanyName,
-                    Fax = entity.Fax,
-                    Phone = entity.Phone,
-                    Products = entity.Products,
-                    SupplierId = entity.SupplierId,
-                    Website = entity.Website,
-
-
-                };
-
+                return MapperFactory.Map<Suppliers, SuppliersDto>(entity);
             }
-            return result;
         }
 
-        public void Add(SuppliesDto dto)
+        public void Add(SuppliersDto dto)
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                var entity = new Suppliers
-                {
-                    Adress = dto.Adress,
-                    CompanyName = dto.CompanyName,
-                    Fax = dto.Fax,
-                    Phone = dto.Phone,
-                    Products = dto.Products,
-                    SupplierId = dto.SupplierId,
-                    Website = dto.Website,
-                };
+                var entity = MapperFactory.Map<SuppliersDto, Suppliers>(dto);
 
                 uow.SuppliesRepository.Add(entity);
                 uow.SaveChanges();
             }
-
         }
 
-        public void Delete(SuppliesDto dto)
+        public void Update(SuppliersDto dto)
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                var entity = new Suppliers
-                {
-                    Adress = dto.Adress,
-                    CompanyName = dto.CompanyName,
-                    Fax = dto.Fax,
-                    Phone = dto.Phone,
-                    Products = dto.Products,
-                    SupplierId = dto.SupplierId,
-                    Website = dto.Website,
-                };
+                var entity = MapperFactory.Map<SuppliersDto, Suppliers>(dto);
 
+                uow.SuppliesRepository.Update(entity);
+                uow.SaveChanges();
+            }
+        }
+
+        public void Delete(int id)
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                var entity = uow.SuppliesRepository.GetById(id);
                 uow.SuppliesRepository.Delete(entity);
                 uow.SaveChanges();
             }
         }
 
 
-
-        public void Update(SuppliesDto dto)
-        {
-            using (UnitOfWork uow = new UnitOfWork())
-            {
-                var entity = new Suppliers
-                {
-                    Adress = dto.Adress,
-                    CompanyName = dto.CompanyName,
-                    Fax = dto.Fax,
-                    Phone = dto.Phone,
-                    Products = dto.Products,
-                    SupplierId = dto.SupplierId,
-                    Website = dto.Website,
-                };
-
-                uow.SuppliesRepository.Update(entity);
-                uow.SaveChanges();
-
-            }
-        }
     }
 
 }

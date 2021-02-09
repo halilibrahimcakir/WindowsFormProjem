@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BarkotTakip.Business.Service;
+using BarkotTakip.Dto.Dto;
+using BarkotTakipSistemi.CacheManager;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,29 +18,50 @@ namespace BarkotTakipSistemi
         public Login()
         {
             InitializeComponent();
-            txtPw.UseSystemPasswordChar = true;
-            txtId.PromptText = "Kullanıcı  Adı giriniz...";
+
 
         }
-
+      
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Main mainform = new Main();
-            mainform.Show();
 
-            Hide();
+            IEmployeeServices employeesServices = new EmployeesServices();
+            var login = (from emp in employeesServices.GetAll().Where(p => p.Username == txtId.Text && p.Password == txtPw.Text)
+                         select new EmployeeDto
+                         {
+                             Username = emp.Username,
+                             Password = emp.Password,
+                             NameSurname = emp.NameSurname,
+                             EmployeeId = emp.EmployeeId
+
+
+                         }).FirstOrDefault();
+          
+            
+            
+            if (login != null)
+            {
+                Cache.NameSurname = login.NameSurname;
+                Cache.EmployeeId = login.EmployeeId;
+                Main mainform = new Main();
+                Hide();
+                mainform.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Hatalı kullanıcı adı veya şifre girildi...");
+            }
+
+
+
+
         }
 
-     
-
-        private void txtPw_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void chboxShowPw_CheckedChanged(object sender, EventArgs e)
         {
-            if (chboxPwShow.Checked == true)
+            if (cmbPwShow.Checked == true)
             {
 
                 txtPw.UseSystemPasswordChar = false;
@@ -46,5 +70,13 @@ namespace BarkotTakipSistemi
             else
                 txtPw.UseSystemPasswordChar = true;
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            
+
+        }
+
+       
     }
 }

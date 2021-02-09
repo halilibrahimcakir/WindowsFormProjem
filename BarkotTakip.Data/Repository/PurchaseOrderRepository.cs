@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BarkotTakip.Data.Repository
 {
-    public  class PurchaseOrderRepository : RepositoryBase<PurchaseOrder>, ICategoriesRepository
+    public  class PurchaseOrderRepository : RepositoryBase<PurchaseOrder>, IPurchaseOrderRepository
     {
         public PurchaseOrderRepository(MarketBarkodDBEntities context) : base(context)
         {

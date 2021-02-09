@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8695E12F-2804-42F2-B6D5-F06C90EFEFAD}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>BarkotTakip.Dto</RootNamespace>
     <AssemblyName>BarkotTakip.Dto</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -32,10 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,14 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\PurchaseOrderStatusDto.cs" />
+    <Compile Include="Dto\PaymentTypeDto.cs" />
+    <Compile Include="Dto\PurchaseOrderDetailDto.cs" />
+    <Compile Include="Dto\EmployeeTypeDto.cs" />
     <Compile Include="Dto\PurchaseOrderDto.cs" />
-    <Compile Include="Dto\SuppliesDto.cs" />
-    <Compile Include="Dto\ProductsStockDto.cs" />
-    <Compile Include="Dto\ProducstDto.cs" />
-    <Compile Include="Dto\OrderDto.cs" />
+    <Compile Include="Dto\SuppliersDto.cs" />
+    <Compile Include="Dto\ProductsDto.cs" />
     <Compile Include="Dto\OrderDetailsDto.cs" />
     <Compile Include="Dto\InvoceDto.cs" />
-    <Compile Include="Dto\EmployeesDto.cs" />
+    <Compile Include="Dto\EmployeeDto.cs" />
     <Compile Include="Dto\CustomerSummaryDto.cs" />
     <Compile Include="Dto\CustomersDto.cs" />
     <Compile Include="Dto\CategoriesDto.cs" />
@@ -61,13 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BarkotTakip.Data\BarkotTakip.Data.csproj">
-      <Project>{A4880CD5-9D14-4B48-ABC5-710DAA5A414A}</Project>
-      <Name>BarkotTakip.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

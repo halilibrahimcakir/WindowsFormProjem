@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using BarkotTakip.Data.Context;
 using BarkotTakip.Data.UnitOfWork;
 using BarkotTakip.Dto.Dto;
+using BarkotTakip.Service.Mapper;
 
-namespace BarkotTakip.Business.Service
+namespace BarkotTakip.Business.Services
 {
     public interface IPurchaseOrderServices
     {
@@ -17,85 +18,43 @@ namespace BarkotTakip.Business.Service
         void Add(PurchaseOrderDto dto);
         void Update(PurchaseOrderDto dto);
 
-        void Delete(PurchaseOrderDto dto);
-
+        void Delete(int id);
 
     }
     public class PurchaseOrderServices : IPurchaseOrderServices
-
     {
-
-
         public List<PurchaseOrderDto> GetAll()
         {
             List<PurchaseOrderDto> result = new List<PurchaseOrderDto>();
 
+
             using (UnitOfWork uow = new UnitOfWork())
             {
                 var list = uow.PurchaseOrderRepository.GetAll().ToList();
-
-
-                result = list.Select(c => new PurchaseOrderDto
-                {
-                    Quantity = c.Quantity,
-                    CustomerId = c.CustomerId,
-                    Customers = c.Customers,
-                    IsApporeved = c.IsApporeved,
-                    Price = c.Price,
-                    ProductId = c.ProductId,
-                    Products = c.Products,
-                    PurchaseOrderId = c.PurchaseOrderId,
-
-
-
-                }).ToList();
+                return list.Select(MapperFactory.Map<PurchaseOrder, PurchaseOrderDto>).ToList();
 
             }
-            return result;
-
-
 
         }
         public PurchaseOrderDto GetById(int id)
         {
             PurchaseOrderDto result = new PurchaseOrderDto();
+
             using (UnitOfWork uow = new UnitOfWork())
             {
                 var entity = uow.PurchaseOrderRepository.GetById(id);
 
-                result = new PurchaseOrderDto
-                {
-                    Quantity = entity.Quantity,
-                    CustomerId = entity.CustomerId,
-                    Customers = entity.Customers,
-                    IsApporeved = entity.IsApporeved,
-                    Price = entity.Price,
-                    ProductId = entity.ProductId,
-                    Products = entity.Products,
-                    PurchaseOrderId = entity.PurchaseOrderId,
-
-
-                };
+                return MapperFactory.Map<PurchaseOrder, PurchaseOrderDto>(entity);
 
             }
-            return result;
+           
         }
 
         public void Add(PurchaseOrderDto dto)
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                var entity = new PurchaseOrder
-                {
-                    Quantity = dto.Quantity,
-                    CustomerId = dto.CustomerId,
-                    Customers = dto.Customers,
-                    IsApporeved = dto.IsApporeved,
-                    Price = dto.Price,
-                    ProductId = dto.ProductId,
-                    Products = dto.Products,
-                    PurchaseOrderId = dto.PurchaseOrderId,
-                };
+                var entity = MapperFactory.Map<PurchaseOrderDto, PurchaseOrder>(dto);
 
                 uow.PurchaseOrderRepository.Add(entity);
                 uow.SaveChanges();
@@ -103,21 +62,11 @@ namespace BarkotTakip.Business.Service
 
         }
 
-        public void Delete(PurchaseOrderDto dto)
+        public void Delete(int id)
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                var entity = new PurchaseOrder
-                {
-                    Quantity = dto.Quantity,
-                    CustomerId = dto.CustomerId,
-                    Customers = dto.Customers,
-                    IsApporeved = dto.IsApporeved,
-                    Price = dto.Price,
-                    ProductId = dto.ProductId,
-                    Products = dto.Products,
-                    PurchaseOrderId = dto.PurchaseOrderId,
-                };
+                var entity = uow.PurchaseOrderRepository.GetById(id);
 
                 uow.PurchaseOrderRepository.Delete(entity);
                 uow.SaveChanges();
@@ -130,23 +79,15 @@ namespace BarkotTakip.Business.Service
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                var entity = new PurchaseOrder
-                {
-                    Quantity = dto.Quantity,
-                    CustomerId = dto.CustomerId,
-                    Customers = dto.Customers,
-                    IsApporeved = dto.IsApporeved,
-                    Price = dto.Price,
-                    ProductId = dto.ProductId,
-                    Products = dto.Products,
-                    PurchaseOrderId = dto.PurchaseOrderId,
-                };
+                var entity = MapperFactory.Map<PurchaseOrderDto, PurchaseOrder>(dto);
 
                 uow.PurchaseOrderRepository.Update(entity);
                 uow.SaveChanges();
 
             }
         }
+
+       
     }
 
 }

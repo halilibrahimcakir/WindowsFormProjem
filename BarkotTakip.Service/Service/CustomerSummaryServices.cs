@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using BarkotTakip.Data.UnitOfWork;
 using BarkotTakip.Dto.Dto;
-using AutoMapper;
 using BarkotTakip.Data.Context;
+using BarkotTakip.Service.Mapper;
 
 namespace BarkotTakip.Business.Service
 {
@@ -17,7 +17,7 @@ namespace BarkotTakip.Business.Service
         void Add(CustomerSummaryDto dto);
         void Update(CustomerSummaryDto dto);
 
-        void Delete(CustomerSummaryDto dto);
+        void Delete(int id);
 
 
     }
@@ -27,77 +27,53 @@ namespace BarkotTakip.Business.Service
 
         public List<CustomerSummaryDto> GetAll()
         {
-            List<CustomerSummaryDto> result = new List<CustomerSummaryDto>();
-
+     
             using (UnitOfWork uow = new UnitOfWork())
             {
                 var list = uow.CustomerSummaryRepository.GetAll().ToList();
-
-                var config = new MapperConfiguration(cfg => cfg.CreateMap<CustomersSummary, CustomerSummaryDto>());
-
-                var mapper = config.CreateMapper();
-
-                result = mapper.Map<List<CustomersSummary>, List<CustomerSummaryDto>>(list);
-                list = mapper.Map<List<CustomerSummaryDto>, List<CustomersSummary>>(result);
-
-
+                return list.Select(MapperFactory.Map<CustomerSummary, CustomerSummaryDto>).ToList();
             }
-            return result;
-
-
-
         }
+
+
+
         public CustomerSummaryDto GetById(int id)
         {
-            CustomerSummaryDto result = new CustomerSummaryDto();
             using (UnitOfWork uow = new UnitOfWork())
             {
                 var entity = uow.CustomerSummaryRepository.GetById(id);
 
-                result = new CustomerSummaryDto
-                {
-                    NameSurname = entity.NameSurname,
-                    Adress = entity.Adress,
-                    CustomerId = entity.Adress,
-                    Phone = entity.Adress,
-                    WillGive = entity.WillGive
-                };
-
+                return MapperFactory.Map<CustomerSummary, CustomerSummaryDto>(entity);
             }
-            return result;
         }
 
         public void Add(CustomerSummaryDto dto)
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                var entity = new CustomersSummary
-                {
-                   CustomerId = dto.CustomerId,
-                   WillGive = dto.WillGive,
-                   Adress = dto.Adress,
-                   NameSurname = dto.NameSurname,
-                   Phone = dto.Phone,             
-                };
+                var entity = MapperFactory.Map<CustomerSummaryDto, CustomerSummary>(dto);
 
                 uow.CustomerSummaryRepository.Add(entity);
                 uow.SaveChanges();
             }
-
         }
 
-        public void Delete(CustomerSummaryDto dto)
+        public void Update(CustomerSummaryDto dto)
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                var entity = new CustomersSummary
-                {
-                    CustomerId = dto.CustomerId,
-                    WillGive = dto.WillGive,
-                    Adress = dto.Adress,
-                    NameSurname = dto.NameSurname,
-                    Phone = dto.Phone,
-                };
+                var entity = MapperFactory.Map<CustomerSummaryDto, CustomerSummary>(dto);
+
+                uow.CustomerSummaryRepository.Update(entity);
+                uow.SaveChanges();
+            }
+        }
+
+        public void Delete(int id)
+        {
+            using (UnitOfWork uow = new UnitOfWork())
+            {
+                var entity = uow.CustomerSummaryRepository.GetById(id);
 
                 uow.CustomerSummaryRepository.Delete(entity);
                 uow.SaveChanges();
@@ -105,30 +81,7 @@ namespace BarkotTakip.Business.Service
         }
 
 
-
-
-
-        public void Update(CustomerSummaryDto dto)
-        {
-            using (UnitOfWork uow = new UnitOfWork())
-            {
-                var entity = new CustomersSummary
-                {
-                    CustomerId = dto.CustomerId,
-                    WillGive = dto.WillGive,
-                    Adress = dto.Adress,
-                    NameSurname = dto.NameSurname,
-                    Phone = dto.Phone,
-                };
-
-                uow.CustomerSummaryRepository.Update(entity);
-                uow.SaveChanges();
-
-            }
-        }
-
-
     }
 
-    
+
 }

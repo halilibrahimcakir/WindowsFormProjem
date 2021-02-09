@@ -18,7 +18,6 @@ namespace BarkotTakip.Data.Context
         public Customers()
         {
             this.Invoce = new HashSet<Invoce>();
-            this.Orders = new HashSet<Orders>();
             this.PurchaseOrder = new HashSet<PurchaseOrder>();
         }
     
@@ -27,11 +26,15 @@ namespace BarkotTakip.Data.Context
         public string Adress { get; set; }
         public string Phone { get; set; }
         public Nullable<decimal> WillGive { get; set; }
+        public Nullable<System.DateTime> CreateDate { get; set; }
+        public Nullable<int> UpdatedBy { get; set; }
+        public Nullable<System.DateTime> UpdatedDate { get; set; }
+        public Nullable<int> CreatedBy { get; set; }
+        public Nullable<bool> IsActive { get; set; }
     
+        public virtual CustomerSummary CustomerSummary { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Invoce> Invoce { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Orders> Orders { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PurchaseOrder> PurchaseOrder { get; set; }
     }

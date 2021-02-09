@@ -1,4 +1,8 @@
-﻿using System;
+﻿using BarkotTakipSistemi.ADMİN_OPERATİON;
+using BarkotTakipSistemi.CASE_OPERATİON;
+using BarkotTakipSistemi.PRODUCT_OPERATION;
+using BarkotTakipSistemi.SALES_OPERATİON;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,5 +22,6 @@ namespace BarkotTakipSistemi
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
         }
+
     }
 }

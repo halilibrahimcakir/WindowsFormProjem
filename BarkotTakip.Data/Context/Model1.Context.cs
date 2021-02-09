@@ -27,14 +27,15 @@ namespace BarkotTakip.Data.Context
     
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
-        public virtual DbSet<Employees> Employees { get; set; }
+        public virtual DbSet<CustomerSummary> CustomerSummary { get; set; }
+        public virtual DbSet<Employee> Employee { get; set; }
+        public virtual DbSet<EmployeeType> EmployeeType { get; set; }
         public virtual DbSet<Invoce> Invoce { get; set; }
-        public virtual DbSet<OrderDetails> OrderDetails { get; set; }
-        public virtual DbSet<Orders> Orders { get; set; }
+        public virtual DbSet<PaymentType> PaymentType { get; set; }
         public virtual DbSet<Products> Products { get; set; }
-        public virtual DbSet<ProductStock> ProductStock { get; set; }
         public virtual DbSet<PurchaseOrder> PurchaseOrder { get; set; }
+        public virtual DbSet<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
         public virtual DbSet<Suppliers> Suppliers { get; set; }
-        public virtual DbSet<CustomersSummary> CustomersSummary { get; set; }
+        public virtual DbSet<PurchaseOrderStatus> PurchaseOrderStatus { get; set; }
     }
 }

@@ -14,17 +14,18 @@ namespace BarkotTakip.Data.UnitOfWork
         #region Variable
         private readonly MarketBarkodDBEntities _contex;
 
-        private  CategoriesRepository _categoriesRepository = null;
-        private  CustomersRepository _customersRepository = null;
-        private  EmployeesRepository _employeesRepository = null;
-        private  OrdersRepository _ordersRepository = null;
+        private CategoriesRepository _categoriesRepository = null;
+        private CustomersRepository _customersRepository = null;
+        private EmployeeRepository _employeeRepository = null;
         private ProductsRepository _productsRepository = null;
-        private ProductsStockRepository _productStockRepository = null;
         private PurchaseOrderRepository _purchaseOrderRepository = null;
         private CustomerSummaryRepository _customerSummaryRepository = null;
         private InvoceRepository _invoceRepository = null;
-        private OrderDetailsRepository _orderDetailsRepository = null;
         private SuppliersRepository _suppliesRepository = null;
+        private PaymentTypeRepository _paymentTypeRepository = null;
+        private EmployeeTypeRepository _employeeTypeRepository = null;
+        private PurchaseOrderDetailRepository _purchaseOrderDetailRepository = null;
+        private PurchaseOrderStatusRepository _purchaseOrderStatusRepository = null;
         #endregion
 
 
@@ -38,6 +39,56 @@ namespace BarkotTakip.Data.UnitOfWork
 
         #region Repository
 
+        public PurchaseOrderStatusRepository PurchaseOrderStatusRepository
+        {
+            get
+            {
+                if (_purchaseOrderStatusRepository == null)
+                {
+                    _purchaseOrderStatusRepository = new PurchaseOrderStatusRepository(_contex);
+                };
+                return _purchaseOrderStatusRepository;
+            }
+
+        }
+
+        public PurchaseOrderDetailRepository PurchaseOrderDetailRepository
+        {
+            get
+            {
+                if (_purchaseOrderDetailRepository == null)
+                {
+                    _purchaseOrderDetailRepository = new PurchaseOrderDetailRepository(_contex);
+                };
+                return _purchaseOrderDetailRepository;
+            }
+
+        }
+
+        public PaymentTypeRepository PaymentTypeRepository
+        {
+            get
+            {
+                if (_paymentTypeRepository == null)
+                {
+                    _paymentTypeRepository = new PaymentTypeRepository(_contex);
+                };
+                return _paymentTypeRepository;
+            }
+
+        }
+        public EmployeeTypeRepository  EmployeeTypeRepository
+        {
+            get
+            {
+                if (_employeeTypeRepository == null)
+                {
+                    _employeeTypeRepository = new EmployeeTypeRepository(_contex);
+                };
+                return _employeeTypeRepository;
+            }
+        }
+
         public SuppliersRepository SuppliesRepository
         {
             get
@@ -47,17 +98,6 @@ namespace BarkotTakip.Data.UnitOfWork
                     _suppliesRepository = new SuppliersRepository(_contex);
                 };
                 return _suppliesRepository;
-            }
-        }
-        public OrderDetailsRepository OrderDetailsRepository
-        {
-            get
-            {
-                if (_orderDetailsRepository == null)
-                {
-                    _orderDetailsRepository = new OrderDetailsRepository(_contex);
-                };
-                return _orderDetailsRepository;
             }
         }
 
@@ -107,28 +147,18 @@ namespace BarkotTakip.Data.UnitOfWork
                 return _customersRepository;
             }
         }
-        public EmployeesRepository EmployeesRepository
+        public EmployeeRepository EmployeeRepository
         {
             get
             {
-                if (_employeesRepository == null)
+                if (_employeeRepository == null)
                 {
-                    _employeesRepository = new EmployeesRepository(_contex);
+                    _employeeRepository = new EmployeeRepository(_contex);
                 }
-                return _employeesRepository;
+                return _employeeRepository;
             }
         }
-        public OrdersRepository OrdersRepository
-        {
-            get
-            {
-                if (_ordersRepository == null)
-                {
-                    _ordersRepository = new OrdersRepository(_contex);
-                }
-                return _ordersRepository;
-            }
-        }
+
         public ProductsRepository ProductsRepository
         {
             get
@@ -141,17 +171,6 @@ namespace BarkotTakip.Data.UnitOfWork
             }
         }
 
-        public ProductsStockRepository ProductStockRepository
-        {
-            get
-            {
-                if (_productStockRepository == null)
-                {
-                    _productStockRepository = new ProductsStockRepository(_contex);
-                }
-                return _productStockRepository;
-            }
-        }
         public PurchaseOrderRepository PurchaseOrderRepository
         {
             get

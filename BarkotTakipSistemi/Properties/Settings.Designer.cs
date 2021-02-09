@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BarkotTakipSistemi.Properties
+namespace SALES_OPERATION.Properties
 {
 
 

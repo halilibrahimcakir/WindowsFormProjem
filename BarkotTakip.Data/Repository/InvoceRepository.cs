@@ -15,6 +15,10 @@ namespace BarkotTakip.Data.Repository
             
         }
 
+        public InvoceRepository()
+        {
+
+        }
 
     }
 

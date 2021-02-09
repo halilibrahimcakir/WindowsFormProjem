@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,23 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +51,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
@@ -47,7 +68,9 @@
       <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +82,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADMIN OPERATION\AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN OPERATION\AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN OPERATION\EmployeeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN OPERATION\EmployeeEdit.Designer.cs">
+      <DependentUpon>EmployeeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN OPERATION\NewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN OPERATION\NewEmployee.Designer.cs">
+      <DependentUpon>NewEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CacheManager\Cache.cs" />
+    <Compile Include="CASE OPERATİON\EditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CASE OPERATİON\EditCustomer.Designer.cs">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CASE OPERATİON\Case.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CASE OPERATİON\Case.Designer.cs">
+      <DependentUpon>Case.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CASE OPERATİON\NewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CASE OPERATİON\NewCustomer.Designer.cs">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CASE OPERATİON\Veresiye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CASE OPERATİON\Veresiye.Designer.cs">
+      <DependentUpon>Veresiye.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,17 +137,40 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRODUCT OPERATION\NewProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRODUCT OPERATION\NewProduct.Designer.cs">
+      <DependentUpon>NewProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCT OPERATION\ProductEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRODUCT OPERATION\ProductEdit.Designer.cs">
+      <DependentUpon>ProductEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCT OPERATION\ProductManegament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRODUCT OPERATION\ProductManegament.Designer.cs">
+      <DependentUpon>ProductManegament.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SALES OPERATİON\ADD PRODUCT.cs">
+    <Compile Include="SALES OPERATİON\FindProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SALES OPERATİON\.Designer.cs">
-      <DependentUpon>ADD PRODUCT.cs</DependentUpon>
+    <Compile Include="SALES OPERATİON\FindProduct.Designer.cs">
+      <DependentUpon>FindProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SALES OPERATİON\IadeEdit.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SALES OPERATİON\IadeEdit.Designer.cs">
+      <DependentUpon>IadeEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="SALES OPERATİON\SELL.cs">
       <SubType>Form</SubType>
@@ -91,19 +180,73 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SALES OPERATİON\VeresiyeSat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SALES OPERATİON\VeresiyeSat.Designer.cs">
+      <DependentUpon>VeresiyeSat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SALES OPERATİON\Iade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SALES OPERATİON\Iade.Designer.cs">
+      <DependentUpon>Iade.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ADMIN OPERATION\AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN OPERATION\EmployeeEdit.resx">
+      <DependentUpon>EmployeeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN OPERATION\NewEmployee.resx">
+      <DependentUpon>NewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CASE OPERATİON\EditCustomer.resx">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CASE OPERATİON\Case.resx">
+      <DependentUpon>Case.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CASE OPERATİON\NewCustomer.resx">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CASE OPERATİON\Veresiye.resx">
+      <DependentUpon>Veresiye.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRODUCT OPERATION\NewProduct.resx">
+      <DependentUpon>NewProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRODUCT OPERATION\ProductEdit.resx">
+      <DependentUpon>ProductEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRODUCT OPERATION\ProductManegament.resx">
+      <DependentUpon>ProductManegament.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="SALES OPERATİON\FindProduct.resx">
+      <DependentUpon>FindProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SALES OPERATİON\IadeEdit.resx">
+      <DependentUpon>IadeEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SALES OPERATİON\SELL.resx">
       <DependentUpon>SELL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SALES OPERATİON\VeresiyeSat.resx">
+      <DependentUpon>VeresiyeSat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SALES OPERATİON\Iade.resx">
+      <DependentUpon>Iade.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -120,37 +263,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\5tl.jpg" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 ve x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 </ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\10-tl.jpg" />
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\20tl.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\50tl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\100tl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\200tl.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngegg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Varlık 1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ıd pw.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BarkotTakip.Common\BarkotTakip.Common.csproj">
-      <Project>{0210bab0-2c19-4852-97f7-50e39d4887b5}</Project>
-      <Name>BarkotTakip.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BarkotTakip.Data\BarkotTakip.Data.csproj">
       <Project>{a4880cd5-9d14-4b48-abc5-710daa5a414a}</Project>
       <Name>BarkotTakip.Data</Name>
@@ -160,9 +287,26 @@
       <Name>BarkotTakip.Dto</Name>
     </ProjectReference>
     <ProjectReference Include="..\BarkotTakip.Service\BarkotTakip.Businees.csproj">
-      <Project>{059f3246-6b99-44ab-9f80-bfa33f4cab41}</Project>
+      <Project>{059F3246-6B99-44AB-9F80-BFA33F4CAB41}</Project>
       <Name>BarkotTakip.Businees</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\childform logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

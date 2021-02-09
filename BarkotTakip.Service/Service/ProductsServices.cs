@@ -1,6 +1,7 @@
-﻿using BarkotTakip.Data.Context;
+﻿  using BarkotTakip.Data.Context;
 using BarkotTakip.Data.UnitOfWork;
 using BarkotTakip.Dto.Dto;
+using BarkotTakip.Service.Mapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,104 +10,46 @@ using System.Threading.Tasks;
 
 namespace BarkotTakip.Business.Service
 {
-    public interface IProductsService
+    public interface IProductsServices
     {
-        List<ProducstDto> GetAll();
-        ProducstDto GetById(int id);
-        void Add(ProducstDto dto);
-        void Update(ProducstDto dto);
+        List<ProductsDto> GetAll();
+        ProductsDto GetById(int id);
+        void Add(ProductsDto dto);
+        void Update(ProductsDto dto);
 
-        void Delete(ProducstDto dto);
-
-
+        void Delete(int id);
     }
-    public class ProductsService : IProductsService
+    public class ProductsServices : IProductsServices
     {
 
 
-        public List<ProducstDto> GetAll()
+        public List<ProductsDto> GetAll()
         {
-            List<ProducstDto> result = new List<ProducstDto>();
 
             using (UnitOfWork uow = new UnitOfWork())
             {
                 var list = uow.ProductsRepository.GetAll().ToList();
-
-
-                result = list.Select(c => new ProducstDto
-                {
-                    QuantityPerUnit = c.QuantityPerUnit,
-                    Categories = c.Categories,
-                    CategoryId = c.CategoryId,
-                    Discount = c.Discount,
-                    ExpirationDate = c.ExpirationDate,
-                    OrderDetails = c.OrderDetails,
-                    ProductId = c.ProductId,
-                    ProductName = c.ProductName,
-                    ProductStock = c.ProductStock,
-                    PurchaseOrder = c.PurchaseOrder,
-                    SupplierId = c.SupplierId,
-                    Suppliers = c.Suppliers,
-                    UnitPrice = c.UnitPrice,
-                    UnitsInStock = c.UnitsInStock
-                }).ToList();
+                return list.Select(MapperFactory.Map<Products, ProductsDto>).ToList();
 
             }
-            return result;
-
-
-
+            
         }
-        public ProducstDto GetById(int id)
+        public ProductsDto GetById(int id)
         {
-            ProducstDto result = new ProducstDto();
             using (UnitOfWork uow = new UnitOfWork())
             {
                 var entity = uow.ProductsRepository.GetById(id);
-
-                result = new ProducstDto
-                {
-                    QuantityPerUnit = entity.QuantityPerUnit,
-                    Categories = entity.Categories,
-                    CategoryId = entity.CategoryId,
-                    Discount = entity.Discount,
-                    ExpirationDate = entity.ExpirationDate,
-                    OrderDetails = entity.OrderDetails,
-                    ProductId = entity.ProductId,
-                    ProductName = entity.ProductName,
-                    ProductStock = entity.ProductStock,
-                    PurchaseOrder = entity.PurchaseOrder,
-                    SupplierId = entity.SupplierId,
-                    Suppliers = entity.Suppliers,
-                    UnitPrice = entity.UnitPrice,
-                    UnitsInStock = entity.UnitsInStock
-                };
+                return MapperFactory.Map<Products, ProductsDto>(entity);
 
             }
-            return result;
+           
         }
 
-        public void Add(ProducstDto dto)
+        public void Add(ProductsDto dto)
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                var entity = new Products
-                {
-                    QuantityPerUnit = dto.QuantityPerUnit,
-                    Categories = dto.Categories,
-                    CategoryId = dto.CategoryId,
-                    Discount = dto.Discount,
-                    ExpirationDate = dto.ExpirationDate,
-                    OrderDetails = dto.OrderDetails,
-                    ProductId = dto.ProductId,
-                    ProductName = dto.ProductName,
-                    ProductStock = dto.ProductStock,
-                    PurchaseOrder = dto.PurchaseOrder,
-                    SupplierId = dto.SupplierId,
-                    Suppliers = dto.Suppliers,
-                    UnitPrice = dto.UnitPrice,
-                    UnitsInStock = dto.UnitsInStock
-                };
+                var entity = MapperFactory.Map<ProductsDto, Products>(dto);
 
                 uow.ProductsRepository.Add(entity);
                 uow.SaveChanges();
@@ -114,27 +57,11 @@ namespace BarkotTakip.Business.Service
 
         }
 
-        public void Delete(ProducstDto dto)
+        public void Delete(int id)
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                var entity = new Products
-                {
-                    QuantityPerUnit = dto.QuantityPerUnit,
-                    Categories = dto.Categories,
-                    CategoryId = dto.CategoryId,
-                    Discount = dto.Discount,
-                    ExpirationDate = dto.ExpirationDate,
-                    OrderDetails = dto.OrderDetails,
-                    ProductId = dto.ProductId,
-                    ProductName = dto.ProductName,
-                    ProductStock = dto.ProductStock,
-                    PurchaseOrder = dto.PurchaseOrder,
-                    SupplierId = dto.SupplierId,
-                    Suppliers = dto.Suppliers,
-                    UnitPrice = dto.UnitPrice,
-                    UnitsInStock = dto.UnitsInStock
-                };
+                var entity = uow.ProductsRepository.GetById(id);
 
                 uow.ProductsRepository.Delete(entity);
                 uow.SaveChanges();
@@ -143,27 +70,11 @@ namespace BarkotTakip.Business.Service
 
 
 
-        public void Update(ProducstDto dto)
+        public void Update(ProductsDto dto)
         {
             using (UnitOfWork uow = new UnitOfWork())
             {
-                var entity = new Products
-                {
-                    QuantityPerUnit = dto.QuantityPerUnit,
-                    Categories = dto.Categories,
-                    CategoryId = dto.CategoryId,
-                    Discount = dto.Discount,
-                    ExpirationDate = dto.ExpirationDate,
-                    OrderDetails = dto.OrderDetails,
-                    ProductId = dto.ProductId,
-                    ProductName = dto.ProductName,
-                    ProductStock = dto.ProductStock,
-                    PurchaseOrder = dto.PurchaseOrder,
-                    SupplierId = dto.SupplierId,
-                    Suppliers = dto.Suppliers,
-                    UnitPrice = dto.UnitPrice,
-                    UnitsInStock = dto.UnitsInStock
-                };
+                var entity = MapperFactory.Map<ProductsDto, Products>(dto);
 
                 uow.ProductsRepository.Update(entity);
                 uow.SaveChanges();
@@ -171,6 +82,6 @@ namespace BarkotTakip.Business.Service
             }
         }
 
-
+  
     }
 }

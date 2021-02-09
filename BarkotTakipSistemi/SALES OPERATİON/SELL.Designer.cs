@@ -28,95 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ColumnHeader ProductsAdet;
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.pnlMain = new System.Windows.Forms.Panel();
+            this.lblProductsPrice = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtProducts = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lstwvProductsTable = new System.Windows.Forms.ListView();
-            this.Productsİd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ProductsName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ProductsCategory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ÜrünFiyatı = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtTest = new System.Windows.Forms.Button();
-            ProductsAdet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.lblBarkod = new System.Windows.Forms.Label();
+            this.pnlParaUstu = new System.Windows.Forms.Panel();
+            this.btnHesapla = new System.Windows.Forms.Button();
+            this.txtReceived = new System.Windows.Forms.TextBox();
+            this.lblChangeGivenTxt = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblChangeGiven = new System.Windows.Forms.Label();
+            this.btnProductFind = new System.Windows.Forms.Button();
+            this.pnlGrid = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pnlSalesButton = new System.Windows.Forms.Panel();
+            this.btnİptal = new System.Windows.Forms.Button();
+            this.btnVeresiye = new System.Windows.Forms.Button();
+            this.btnKredi = new System.Windows.Forms.Button();
+            this.btnNakit = new System.Windows.Forms.Button();
+            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SalesPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlMain.SuspendLayout();
+            this.pnlParaUstu.SuspendLayout();
+            this.pnlGrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pnlSalesButton.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ProductsAdet
+            // pnlMain
             // 
-            ProductsAdet.Text = "Ürün Adeti";
-            ProductsAdet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            ProductsAdet.Width = 145;
+            this.pnlMain.Controls.Add(this.lblProductsPrice);
+            this.pnlMain.Controls.Add(this.label2);
+            this.pnlMain.Controls.Add(this.txtProducts);
+            this.pnlMain.Controls.Add(this.lblBarkod);
+            this.pnlMain.Controls.Add(this.pnlParaUstu);
+            this.pnlMain.Controls.Add(this.btnProductFind);
+            this.pnlMain.Controls.Add(this.pnlGrid);
+            this.pnlMain.Controls.Add(this.pnlSalesButton);
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Font = new System.Drawing.Font("Leelawadee", 8.25F);
+            this.pnlMain.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pnlMain.Location = new System.Drawing.Point(0, 0);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(950, 673);
+            this.pnlMain.TabIndex = 0;
             // 
-            // panel1
+            // lblProductsPrice
             // 
-            this.panel1.Controls.Add(this.txtTest);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtProducts);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Font = new System.Drawing.Font("Leelawadee", 8.25F);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(980, 650);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(519, 356);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 30);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "50 tl";
+            this.lblProductsPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblProductsPrice.AutoSize = true;
+            this.lblProductsPrice.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductsPrice.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblProductsPrice.Location = new System.Drawing.Point(663, 366);
+            this.lblProductsPrice.Name = "lblProductsPrice";
+            this.lblProductsPrice.Size = new System.Drawing.Size(51, 30);
+            this.lblProductsPrice.TabIndex = 10;
+            this.lblProductsPrice.Text = "0 TL";
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(396, 356);
+            this.label2.Location = new System.Drawing.Point(540, 366);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 30);
             this.label2.TabIndex = 9;
@@ -124,338 +104,313 @@
             // 
             // txtProducts
             // 
+            this.txtProducts.AcceptsReturn = true;
             this.txtProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtProducts.Location = new System.Drawing.Point(133, 360);
+            this.txtProducts.Location = new System.Drawing.Point(156, 375);
             this.txtProducts.Name = "txtProducts";
-            this.txtProducts.Size = new System.Drawing.Size(222, 21);
-            this.txtProducts.TabIndex = 8;
+            this.txtProducts.Size = new System.Drawing.Size(219, 21);
+            this.txtProducts.TabIndex = 11;
+            this.txtProducts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtProducts.TextChanged += new System.EventHandler(this.txtProducts_TextChanged);
             // 
-            // label1
+            // lblBarkod
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblBarkod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblBarkod.AutoSize = true;
+            this.lblBarkod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblBarkod.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBarkod.ForeColor = System.Drawing.Color.Gold;
+            this.lblBarkod.Location = new System.Drawing.Point(23, 370);
+            this.lblBarkod.Name = "lblBarkod";
+            this.lblBarkod.Size = new System.Drawing.Size(126, 30);
+            this.lblBarkod.TabIndex = 7;
+            this.lblBarkod.Text = "BARKOD :";
+            // 
+            // pnlParaUstu
+            // 
+            this.pnlParaUstu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlParaUstu.Controls.Add(this.btnHesapla);
+            this.pnlParaUstu.Controls.Add(this.txtReceived);
+            this.pnlParaUstu.Controls.Add(this.lblChangeGivenTxt);
+            this.pnlParaUstu.Controls.Add(this.label3);
+            this.pnlParaUstu.Controls.Add(this.lblChangeGiven);
+            this.pnlParaUstu.Location = new System.Drawing.Point(489, 433);
+            this.pnlParaUstu.Name = "pnlParaUstu";
+            this.pnlParaUstu.Size = new System.Drawing.Size(458, 225);
+            this.pnlParaUstu.TabIndex = 6;
+            // 
+            // btnHesapla
+            // 
+            this.btnHesapla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHesapla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHesapla.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            this.btnHesapla.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnHesapla.Location = new System.Drawing.Point(147, 136);
+            this.btnHesapla.Name = "btnHesapla";
+            this.btnHesapla.Size = new System.Drawing.Size(129, 71);
+            this.btnHesapla.TabIndex = 12;
+            this.btnHesapla.Text = "HESAPLA";
+            this.btnHesapla.UseVisualStyleBackColor = true;
+            this.btnHesapla.Click += new System.EventHandler(this.btnHesapla_Click);
+            // 
+            // txtReceived
+            // 
+            this.txtReceived.Location = new System.Drawing.Point(236, 85);
+            this.txtReceived.Name = "txtReceived";
+            this.txtReceived.Size = new System.Drawing.Size(134, 21);
+            this.txtReceived.TabIndex = 11;
+            // 
+            // lblChangeGivenTxt
+            // 
+            this.lblChangeGivenTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(15, 356);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 30);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "BARKOD";
+            this.lblChangeGivenTxt.AutoSize = true;
+            this.lblChangeGivenTxt.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChangeGivenTxt.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblChangeGivenTxt.Location = new System.Drawing.Point(225, 15);
+            this.lblChangeGivenTxt.Name = "lblChangeGivenTxt";
+            this.lblChangeGivenTxt.Size = new System.Drawing.Size(51, 30);
+            this.lblChangeGivenTxt.TabIndex = 10;
+            this.lblChangeGivenTxt.Text = "0 TL";
             // 
-            // panel4
+            // label3
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.Gold;
+            this.label3.Location = new System.Drawing.Point(52, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(166, 30);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Verilen Para :";
+            // 
+            // lblChangeGiven
+            // 
+            this.lblChangeGiven.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblChangeGiven.AutoSize = true;
+            this.lblChangeGiven.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblChangeGiven.ForeColor = System.Drawing.Color.Gold;
+            this.lblChangeGiven.Location = new System.Drawing.Point(52, 15);
+            this.lblChangeGiven.Name = "lblChangeGiven";
+            this.lblChangeGiven.Size = new System.Drawing.Size(161, 30);
+            this.lblChangeGiven.TabIndex = 9;
+            this.lblChangeGiven.Text = "PARA ÜSTÜ :";
+            // 
+            // btnProductFind
+            // 
+            this.btnProductFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProductFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductFind.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            this.btnProductFind.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnProductFind.Location = new System.Drawing.Point(739, 43);
+            this.btnProductFind.Name = "btnProductFind";
+            this.btnProductFind.Size = new System.Drawing.Size(180, 80);
+            this.btnProductFind.TabIndex = 5;
+            this.btnProductFind.Text = "Ürün Bul";
+            this.btnProductFind.UseVisualStyleBackColor = true;
+            this.btnProductFind.Click += new System.EventHandler(this.btnProductFind_Click);
+            // 
+            // pnlGrid
+            // 
+            this.pnlGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.AutoSize = true;
-            this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Controls.Add(this.pictureBox6);
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Controls.Add(this.pictureBox5);
-            this.panel4.Location = new System.Drawing.Point(336, 412);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(424, 235);
-            this.panel4.TabIndex = 6;
+            this.pnlGrid.AutoSize = true;
+            this.pnlGrid.Controls.Add(this.dataGridView1);
+            this.pnlGrid.Location = new System.Drawing.Point(12, 12);
+            this.pnlGrid.Name = "pnlGrid";
+            this.pnlGrid.Size = new System.Drawing.Size(714, 320);
+            this.pnlGrid.TabIndex = 4;
             // 
-            // pictureBox3
+            // dataGridView1
             // 
-            this.pictureBox3.Image = global::BarkotTakipSistemi.Properties.Resources._10_tl;
-            this.pictureBox3.Location = new System.Drawing.Point(221, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(200, 65);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductId,
+            this.ProductName,
+            this.CategoryName,
+            this.Count,
+            this.SalesPrice});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.RowTemplate.Height = 35;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(714, 320);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
-            // pictureBox2
+            // pnlSalesButton
             // 
-            this.pictureBox2.Image = global::BarkotTakipSistemi.Properties.Resources._200tl;
-            this.pictureBox2.Location = new System.Drawing.Point(221, 150);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 82);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.pnlSalesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlSalesButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlSalesButton.Controls.Add(this.btnİptal);
+            this.pnlSalesButton.Controls.Add(this.btnVeresiye);
+            this.pnlSalesButton.Controls.Add(this.btnKredi);
+            this.pnlSalesButton.Controls.Add(this.btnNakit);
+            this.pnlSalesButton.Location = new System.Drawing.Point(12, 433);
+            this.pnlSalesButton.Name = "pnlSalesButton";
+            this.pnlSalesButton.Size = new System.Drawing.Size(471, 225);
+            this.pnlSalesButton.TabIndex = 2;
             // 
-            // pictureBox6
+            // btnİptal
             // 
-            this.pictureBox6.Image = global::BarkotTakipSistemi.Properties.Resources._5tl;
-            this.pictureBox6.Location = new System.Drawing.Point(7, 7);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(198, 65);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
+            this.btnİptal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnİptal.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnİptal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnİptal.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            this.btnİptal.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnİptal.Location = new System.Drawing.Point(245, 129);
+            this.btnİptal.Name = "btnİptal";
+            this.btnİptal.Size = new System.Drawing.Size(210, 85);
+            this.btnİptal.TabIndex = 1;
+            this.btnİptal.Text = "F4 - İPTAL";
+            this.btnİptal.UseVisualStyleBackColor = true;
+            this.btnİptal.Click += new System.EventHandler(this.btnİptal_Click);
             // 
-            // pictureBox1
+            // btnVeresiye
             // 
-            this.pictureBox1.Image = global::BarkotTakipSistemi.Properties.Resources._50tl;
-            this.pictureBox1.Location = new System.Drawing.Point(221, 78);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 66);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.btnVeresiye.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVeresiye.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnVeresiye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVeresiye.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            this.btnVeresiye.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnVeresiye.Location = new System.Drawing.Point(16, 129);
+            this.btnVeresiye.Name = "btnVeresiye";
+            this.btnVeresiye.Size = new System.Drawing.Size(210, 85);
+            this.btnVeresiye.TabIndex = 1;
+            this.btnVeresiye.Text = " F3- VERESİYE";
+            this.btnVeresiye.UseVisualStyleBackColor = true;
+            this.btnVeresiye.Click += new System.EventHandler(this.btnVeresiye_Click);
             // 
-            // pictureBox4
+            // btnKredi
             // 
-            this.pictureBox4.Image = global::BarkotTakipSistemi.Properties.Resources._100tl;
-            this.pictureBox4.Location = new System.Drawing.Point(7, 150);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(198, 82);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
+            this.btnKredi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnKredi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnKredi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnKredi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKredi.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            this.btnKredi.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnKredi.Location = new System.Drawing.Point(245, 15);
+            this.btnKredi.Name = "btnKredi";
+            this.btnKredi.Size = new System.Drawing.Size(210, 85);
+            this.btnKredi.TabIndex = 1;
+            this.btnKredi.Text = "F2 - KREDİ KARTI";
+            this.btnKredi.UseVisualStyleBackColor = false;
+            this.btnKredi.Click += new System.EventHandler(this.btnKredi_Click);
             // 
-            // pictureBox5
+            // btnNakit
             // 
-            this.pictureBox5.Image = global::BarkotTakipSistemi.Properties.Resources._20tl;
-            this.pictureBox5.Location = new System.Drawing.Point(7, 78);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(198, 66);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
+            this.btnNakit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnNakit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNakit.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            this.btnNakit.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnNakit.Location = new System.Drawing.Point(16, 15);
+            this.btnNakit.Name = "btnNakit";
+            this.btnNakit.Size = new System.Drawing.Size(210, 85);
+            this.btnNakit.TabIndex = 2;
+            this.btnNakit.Text = "F1-  NAKİT";
+            this.btnNakit.Click += new System.EventHandler(this.btnNakit_Click);
             // 
-            // button8
+            // ProductId
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            this.button8.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button8.Location = new System.Drawing.Point(769, 312);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(199, 61);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "Fiş Kes";
-            this.button8.UseVisualStyleBackColor = true;
+            this.ProductId.DataPropertyName = "ProductId";
+            this.ProductId.HeaderText = "Ürün Id";
+            this.ProductId.Name = "ProductId";
+            this.ProductId.ReadOnly = true;
             // 
-            // button7
+            // ProductName
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            this.button7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button7.Location = new System.Drawing.Point(769, 218);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(199, 61);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "AYRI AYRI";
-            this.button7.UseVisualStyleBackColor = true;
+            this.ProductName.DataPropertyName = "ProductName";
+            this.ProductName.HeaderText = "Ürün Adı";
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
             // 
-            // button6
+            // CategoryName
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            this.button6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button6.Location = new System.Drawing.Point(769, 122);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(199, 61);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "İADE";
-            this.button6.UseVisualStyleBackColor = true;
+            this.CategoryName.DataPropertyName = "CategoryName";
+            this.CategoryName.HeaderText = "Categori Adı";
+            this.CategoryName.Name = "CategoryName";
+            this.CategoryName.ReadOnly = true;
             // 
-            // button5
+            // Count
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            this.button5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button5.Location = new System.Drawing.Point(769, 31);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(199, 61);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "HIZLI STOK EKLE";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Count.DataPropertyName = "Count";
+            this.Count.HeaderText = "Adet";
+            this.Count.Name = "Count";
             // 
-            // panel3
+            // SalesPrice
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel3.AutoSize = true;
-            this.panel3.Controls.Add(this.lstwvProductsTable);
-            this.panel3.Location = new System.Drawing.Point(12, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(729, 301);
-            this.panel3.TabIndex = 4;
-            // 
-            // lstwvProductsTable
-            // 
-            this.lstwvProductsTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Productsİd,
-            this.ProductsName,
-            ProductsAdet,
-            this.ProductsCategory,
-            this.ÜrünFiyatı});
-            this.lstwvProductsTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstwvProductsTable.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            this.lstwvProductsTable.HideSelection = false;
-            this.lstwvProductsTable.Location = new System.Drawing.Point(0, 0);
-            this.lstwvProductsTable.Name = "lstwvProductsTable";
-            this.lstwvProductsTable.Size = new System.Drawing.Size(729, 301);
-            this.lstwvProductsTable.TabIndex = 0;
-            this.lstwvProductsTable.UseCompatibleStateImageBehavior = false;
-            this.lstwvProductsTable.View = System.Windows.Forms.View.Details;
-            this.lstwvProductsTable.SelectedIndexChanged += new System.EventHandler(this.lstwvProductsTable_SelectedIndexChanged);
-            // 
-            // Productsİd
-            // 
-            this.Productsİd.Text = "Ürün İd";
-            this.Productsİd.Width = 145;
-            // 
-            // ProductsName
-            // 
-            this.ProductsName.Text = "Ürün Adı";
-            this.ProductsName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ProductsName.Width = 145;
-            // 
-            // ProductsCategory
-            // 
-            this.ProductsCategory.Text = "Ürün Kategorisi";
-            this.ProductsCategory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ProductsCategory.Width = 145;
-            // 
-            // ÜrünFiyatı
-            // 
-            this.ÜrünFiyatı.Text = "Ürün Fiyatı";
-            this.ÜrünFiyatı.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ÜrünFiyatı.Width = 145;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.AutoSize = true;
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(12, 454);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(304, 184);
-            this.panel2.TabIndex = 2;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            this.button4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button4.Location = new System.Drawing.Point(171, 95);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(111, 64);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "İPTAL";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            this.button3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button3.Location = new System.Drawing.Point(16, 95);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 64);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "VERESİYE";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Location = new System.Drawing.Point(171, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 64);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "F2 - KREDİ KARTI";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(16, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 64);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "F1 - NAKİT SATIŞ";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // txtTest
-            // 
-            this.txtTest.Location = new System.Drawing.Point(846, 429);
-            this.txtTest.Name = "txtTest";
-            this.txtTest.Size = new System.Drawing.Size(75, 23);
-            this.txtTest.TabIndex = 11;
-            this.txtTest.Text = "button9";
-            this.txtTest.UseVisualStyleBackColor = true;
-            this.txtTest.Click += new System.EventHandler(this.txtTest_Click);
+            this.SalesPrice.DataPropertyName = "SalesPrice";
+            this.SalesPrice.HeaderText = "Fiyat";
+            this.SalesPrice.Name = "SalesPrice";
+            this.SalesPrice.ReadOnly = true;
             // 
             // SELL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(980, 650);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(950, 673);
+            this.Controls.Add(this.pnlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
+            this.MinimumSize = new System.Drawing.Size(950, 650);
             this.Name = "SELL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SATIŞ YAP";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.SELL_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SELL_KeyDown);
+            this.pnlMain.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
+            this.pnlParaUstu.ResumeLayout(false);
+            this.pnlParaUstu.PerformLayout();
+            this.pnlGrid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pnlSalesButton.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel pnlMain;
+        private System.Windows.Forms.Button btnİptal;
+        private System.Windows.Forms.Button btnVeresiye;
+        private System.Windows.Forms.Button btnKredi;
+        private System.Windows.Forms.Button btnNakit;
+        private System.Windows.Forms.Panel pnlSalesButton;
+        private System.Windows.Forms.Panel pnlGrid;
+        private System.Windows.Forms.Button btnProductFind;
+        private System.Windows.Forms.Label lblProductsPrice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtProducts;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ListView lstwvProductsTable;
-        private System.Windows.Forms.ColumnHeader Productsİd;
-        private System.Windows.Forms.ColumnHeader ProductsName;
-        private System.Windows.Forms.ColumnHeader ProductsCategory;
-        private System.Windows.Forms.ColumnHeader ÜrünFiyatı;
-        private System.Windows.Forms.Button txtTest;
+        private System.Windows.Forms.Label lblBarkod;
+        private System.Windows.Forms.Panel pnlParaUstu;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtReceived;
+        private System.Windows.Forms.Label lblChangeGivenTxt;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblChangeGiven;
+        private System.Windows.Forms.Button btnHesapla;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Count;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SalesPrice;
     }
 }
