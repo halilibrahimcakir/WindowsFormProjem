@@ -21,7 +21,7 @@
           <Property Name="NameSurname" Type="nvarchar" MaxLength="30" />
           <Property Name="Adress" Type="nvarchar" MaxLength="100" />
           <Property Name="Phone" Type="nvarchar" MaxLength="24" />
-          <Property Name="WillGive" Type="money" />
+          <Property Name="WillGive" Type="decimal" Precision="8" Scale="2" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdatedBy" Type="int" />
           <Property Name="UpdatedDate" Type="datetime" />
@@ -392,7 +392,7 @@
           <Property Name="NameSurname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Adress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Phone" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
-          <Property Name="WillGive" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="WillGive" Type="Decimal" Precision="8" Scale="2" />
           <NavigationProperty Name="CustomerSummary" Relationship="Self.FK_CustomerSummary_Customers" FromRole="Customers" ToRole="CustomerSummary" />
           <NavigationProperty Name="Invoce" Relationship="Self.FK_Invoce_Invoce" FromRole="Customers" ToRole="Invoce" />
           <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_PurchaseOrder_Customers" FromRole="Customers" ToRole="PurchaseOrder" />
