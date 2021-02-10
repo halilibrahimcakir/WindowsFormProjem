@@ -158,7 +158,7 @@ namespace BarkotTakipSistemi.SALES_OPERATİON
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VeresiyeSat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VeresiyeSat";
+            this.Text = "Veresiye Bul";
             this.Load += new System.EventHandler(this.VeresiyeSat_Load);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();

@@ -67,7 +67,7 @@ namespace BarkotTakipSistemi.CASE_OPERATİON
         {
             if (cmbSearchShow.SelectedIndex == 0)
             {
-                var sorgu = purchaseOrderServices.GetAll().Where(p => p.CreateDate > dtpStartDate.Value && p.CreateDate < dtpEndDate.Value).ToList();
+                var sorgu = purchaseOrderServices.GetAll().Where(p => p.CreateDate > dtpStartDate.Value && p.CreateDate < dtpEndDate.Value && p.PurchaseOrderStatusId == 1).ToList();
                 dataGridView1.DataSource = sorgu;
                 lblSumPrice.Text = sorgu.Sum(p => p.TotalPrice.Value).ToString();
                 lblSumOrder.Text = sorgu.Count().ToString();

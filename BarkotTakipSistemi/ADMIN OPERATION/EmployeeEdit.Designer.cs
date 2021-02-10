@@ -189,7 +189,7 @@ namespace BarkotTakipSistemi.ADMİN_OPERATİON
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EmployeeEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = "Çalışan Düzenle";
             this.Load += new System.EventHandler(this.EmployeeEdit_Load);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();

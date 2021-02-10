@@ -289,7 +289,7 @@ namespace BarkotTakipSistemi.SALES_OPERATION
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IadeEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "IadeEdit";
+            this.Text = "İade Düzenle";
             this.Load += new System.EventHandler(this.IadeEdit_Load);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();

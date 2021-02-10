@@ -141,7 +141,7 @@ namespace BarkotTakipSistemi.CASE_OPERATİON
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NewCustomer";
+            this.Text = "Yeni Müşteri";
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             this.ResumeLayout(false);

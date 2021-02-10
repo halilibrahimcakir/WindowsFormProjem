@@ -188,7 +188,7 @@ namespace BarkotTakipSistemi.ADMIN_OPERATION
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NewEmployee";
+            this.Text = "Yeni Çalışan";
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             this.ResumeLayout(false);
