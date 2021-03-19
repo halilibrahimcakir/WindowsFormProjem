@@ -82,47 +82,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ADMIN OPERATION\AdminPanel.cs">
+    <Compile Include="Admin Operation\AdminPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ADMIN OPERATION\AdminPanel.Designer.cs">
+    <Compile Include="Admin Operation\AdminPanel.Designer.cs">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="ADMIN OPERATION\EmployeeEdit.cs">
+    <Compile Include="Admin Operation\EmployeeEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ADMIN OPERATION\EmployeeEdit.Designer.cs">
+    <Compile Include="Admin Operation\EmployeeEdit.Designer.cs">
       <DependentUpon>EmployeeEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="ADMIN OPERATION\NewEmployee.cs">
+    <Compile Include="Admin Operation\NewEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ADMIN OPERATION\NewEmployee.Designer.cs">
+    <Compile Include="Admin Operation\NewEmployee.Designer.cs">
       <DependentUpon>NewEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="CacheManager\Cache.cs" />
-    <Compile Include="CASE OPERATİON\EditCustomer.cs">
+    <Compile Include="Case Operation\EditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CASE OPERATİON\EditCustomer.Designer.cs">
+    <Compile Include="Case Operation\EditCustomer.Designer.cs">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="CASE OPERATİON\Case.cs">
+    <Compile Include="Case Operation\Case.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CASE OPERATİON\Case.Designer.cs">
+    <Compile Include="Case Operation\Case.Designer.cs">
       <DependentUpon>Case.cs</DependentUpon>
     </Compile>
-    <Compile Include="CASE OPERATİON\NewCustomer.cs">
+    <Compile Include="Case Operation\NewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CASE OPERATİON\NewCustomer.Designer.cs">
+    <Compile Include="Case Operation\NewCustomer.Designer.cs">
       <DependentUpon>NewCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="CASE OPERATİON\Veresiye.cs">
+    <Compile Include="Case Operation\Veresiye.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CASE OPERATİON\Veresiye.Designer.cs">
+    <Compile Include="Case Operation\Veresiye.Designer.cs">
       <DependentUpon>Veresiye.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -137,22 +137,22 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRODUCT OPERATION\NewProduct.cs">
+    <Compile Include="Product Operation\NewProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PRODUCT OPERATION\NewProduct.Designer.cs">
+    <Compile Include="Product Operation\NewProduct.Designer.cs">
       <DependentUpon>NewProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRODUCT OPERATION\ProductEdit.cs">
+    <Compile Include="Product Operation\ProductEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PRODUCT OPERATION\ProductEdit.Designer.cs">
+    <Compile Include="Product Operation\ProductEdit.Designer.cs">
       <DependentUpon>ProductEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRODUCT OPERATION\ProductManegament.cs">
+    <Compile Include="Product Operation\ProductManegament.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PRODUCT OPERATION\ProductManegament.Designer.cs">
+    <Compile Include="Product Operation\ProductManegament.Designer.cs">
       <DependentUpon>ProductManegament.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -160,57 +160,57 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SALES OPERATİON\FindProduct.cs">
+    <Compile Include="Sales Operation\FindProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SALES OPERATİON\FindProduct.Designer.cs">
+    <Compile Include="Sales Operation\FindProduct.Designer.cs">
       <DependentUpon>FindProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="SALES OPERATİON\IadeEdit.cs">
+    <Compile Include="Sales Operation\IadeEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SALES OPERATİON\IadeEdit.Designer.cs">
+    <Compile Include="Sales Operation\IadeEdit.Designer.cs">
       <DependentUpon>IadeEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="SALES OPERATİON\SELL.cs">
+    <Compile Include="Sales Operation\SELL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SALES OPERATİON\SELL.Designer.cs">
+    <Compile Include="Sales Operation\SELL.Designer.cs">
       <DependentUpon>SELL.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SALES OPERATİON\VeresiyeSat.cs">
+    <Compile Include="Sales Operation\VeresiyeSat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SALES OPERATİON\VeresiyeSat.Designer.cs">
+    <Compile Include="Sales Operation\VeresiyeSat.Designer.cs">
       <DependentUpon>VeresiyeSat.cs</DependentUpon>
     </Compile>
-    <Compile Include="SALES OPERATİON\Iade.cs">
+    <Compile Include="Sales Operation\Iade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SALES OPERATİON\Iade.Designer.cs">
+    <Compile Include="Sales Operation\Iade.Designer.cs">
       <DependentUpon>Iade.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ADMIN OPERATION\AdminPanel.resx">
+    <EmbeddedResource Include="Admin Operation\AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ADMIN OPERATION\EmployeeEdit.resx">
+    <EmbeddedResource Include="Admin Operation\EmployeeEdit.resx">
       <DependentUpon>EmployeeEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ADMIN OPERATION\NewEmployee.resx">
+    <EmbeddedResource Include="Admin Operation\NewEmployee.resx">
       <DependentUpon>NewEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CASE OPERATİON\EditCustomer.resx">
+    <EmbeddedResource Include="Case Operation\EditCustomer.resx">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CASE OPERATİON\Case.resx">
+    <EmbeddedResource Include="Case Operation\Case.resx">
       <DependentUpon>Case.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CASE OPERATİON\NewCustomer.resx">
+    <EmbeddedResource Include="Case Operation\NewCustomer.resx">
       <DependentUpon>NewCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CASE OPERATİON\Veresiye.resx">
+    <EmbeddedResource Include="Case Operation\Veresiye.resx">
       <DependentUpon>Veresiye.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
@@ -219,13 +219,13 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRODUCT OPERATION\NewProduct.resx">
+    <EmbeddedResource Include="Product Operation\NewProduct.resx">
       <DependentUpon>NewProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRODUCT OPERATION\ProductEdit.resx">
+    <EmbeddedResource Include="Product Operation\ProductEdit.resx">
       <DependentUpon>ProductEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRODUCT OPERATION\ProductManegament.resx">
+    <EmbeddedResource Include="Product Operation\ProductManegament.resx">
       <DependentUpon>ProductManegament.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -233,19 +233,19 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SALES OPERATİON\FindProduct.resx">
+    <EmbeddedResource Include="Sales Operation\FindProduct.resx">
       <DependentUpon>FindProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SALES OPERATİON\IadeEdit.resx">
+    <EmbeddedResource Include="Sales Operation\IadeEdit.resx">
       <DependentUpon>IadeEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SALES OPERATİON\SELL.resx">
+    <EmbeddedResource Include="Sales Operation\SELL.resx">
       <DependentUpon>SELL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SALES OPERATİON\VeresiyeSat.resx">
+    <EmbeddedResource Include="Sales Operation\VeresiyeSat.resx">
       <DependentUpon>VeresiyeSat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SALES OPERATİON\Iade.resx">
+    <EmbeddedResource Include="Sales Operation\Iade.resx">
       <DependentUpon>Iade.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
